@@ -1,6 +1,43 @@
 # Team AD Automations
 
-This workspace contains a starter document automation for generating offer letters in seconds.
+This workspace contains a Streamlit app and starter document automation for generating offer letters in seconds.
+
+## Streamlit app
+
+Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run locally:
+
+```bash
+streamlit run app.py
+```
+
+The app includes:
+
+- Google login through Streamlit OIDC
+- Single offer letter generation
+- Bulk CSV upload and ZIP download
+- Utility slots for future tools
+
+## Google login setup
+
+Create `.streamlit/secrets.toml` from `.streamlit/secrets.example.toml`.
+
+In Google Cloud, create an OAuth client and add these authorized redirect URIs:
+
+- Local: `http://localhost:8501/oauth2callback`
+- Production: `https://YOUR-APP-DOMAIN/oauth2callback`
+
+Use the Google client ID and client secret in `.streamlit/secrets.toml` or in your hosting provider's Streamlit secrets.
+
+For team access control, set one or both:
+
+- `allowed_domains = ["yourcompany.com"]`
+- `allowed_emails = ["person@yourcompany.com"]`
 
 ## Offer letter generator
 

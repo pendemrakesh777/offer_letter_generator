@@ -1,4 +1,6 @@
 generated_docs/*
 !generated_docs/.gitkeep
+.streamlit/secrets.toml
+.venv/
 __pycache__/
 .DS_Store
