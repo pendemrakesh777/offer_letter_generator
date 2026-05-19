@@ -1,0 +1,4 @@
+generated_docs/*
+!generated_docs/.gitkeep
+__pycache__/
+.DS_Store
